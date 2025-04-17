@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Construction Safety Task Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Construction Safety Task Manager</h1>
+    <label for="task-select">Select a Task:</label>
+    <select id="task-select">
+      <option value="">--Choose a Task--</option>
+      <option value="materialHandling">Material Handling</option>
+      <option value="powerTools">Operating Power Tools</option>
+      <option value="workingAtHeights">Working at Heights</option>
+      <option value="concretePouring">Concrete Pouring</option>
+      <option value="demolition">Demolition Work</option>
+    </select>
+
+    <div id="hazards-section" class="info-section">
+      <h2>Associated Hazards</h2>
+      <ul id="hazards-list"></ul>
+    </div>
+
+    <div id="mitigation-section" class="info-section">
+      <h2>Mitigation Strategies</h2>
+      <ul id="mitigation-list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
