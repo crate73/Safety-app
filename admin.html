@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskSafe Admin</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>TaskSafe Admin</h1>
+
+    <label for="task-select">Select a Task:</label>
+    
+    <label for="taskName">Task Name:</label>
+    <input type="text" id="taskName" />
+    <label for="hazards">Hazards (one per line):</label>
+    <textarea id="hazards" rows="4"></textarea>
+    <label for="mitigations">Mitigations (one per line):</label>
+    <textarea id="mitigations" rows="4"></textarea>
+    <label>Energy Types:</label>
+    <div class="energy-checkboxes">
+      <label><input type="checkbox" value="1 (Gravity)"> 1</label><label><input type="checkbox" value="2 (Motion)"> 2</label><label><input type="checkbox" value="3 (Mechanical)"> 3</label><label><input type="checkbox" value="4 (Electrical)"> 4</label><label><input type="checkbox" value="5 (Pressure)"> 5</label><label><input type="checkbox" value="6 (Sound)"> 6</label><label><input type="checkbox" value="7 (Radiation)"> 7</label><label><input type="checkbox" value="8 (Biological)"> 8</label><label><input type="checkbox" value="9 (Chemical)"> 9</label><label><input type="checkbox" value="10 (Temperature)"> 10</label></div>
+    <button onclick="generateJSON()">Generate Task JSON</button>
+    <pre id="output"></pre>
+    <script>
+      function generateJSON() {
+        const taskName = document.getElementById('taskName').value.trim();
+        const hazards = document.getElementById('hazards').value.trim().split('\n').filter(line => line !== '');
+        const mitigations = document.getElementById('mitigations').value.trim().split('\n').filter(line => line !== '');
+        const energyCheckboxes = document.querySelectorAll('.energy-checkboxes input[type="checkbox"]:checked');
+        const energy = Array.from(energyCheckboxes).map(cb => cb.value);
+        if (!taskName) {
+          alert("Please enter a task name.");
+          return;
+        }
+        const taskObject = {
+          [taskName]: {
+            hazards: hazards,
+            mitigation: mitigations,
+            energy: energy
+          }
+        };
+        document.getElementById('output').textContent = JSON.stringify(taskObject, null, 2);
+      }
+    </script>
+      <option value="">--Choose a Task--</option>
+      <option value="materialHandling">Material Handling</option>
+      <option value="powerTools">Operating Power Tools</option>
+      <option value="workingAtHeights">Working at Heights</option>
+      <option value="concretePouring">Concrete Pouring</option>
+      <option value="demolition">Demolition Work</option>
+    </select>
+
+    <div id="hazards-section" class="info-section">
+      <h2>Associated Hazards</h2>
+      <ul id="hazards-list"></ul>
+    </div>
+
+    <div id="mitigation-section" class="info-section">
+      <h2>Mitigation Strategies</h2>
+      <ul id="mitigation-list"></ul>
+    </div>
+
+    <div id="energy-section" class="info-section">
+      <h2>Energy Sources</h2>
+      <ul id="energy-list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
