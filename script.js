@@ -9,7 +9,8 @@ const taskData = {
       "Use proper lifting techniques",
       "Wear appropriate PPE (gloves, steel-toe boots)",
       "Keep walkways clear and organized"
-    ]
+    ],
+    energy: ["2 (Motion)", "1 (Gravity)"]
   },
   powerTools: {
     hazards: [
@@ -21,7 +22,8 @@ const taskData = {
       "Inspect tools before use",
       "Use safety guards and PPE (goggles, gloves)",
       "Ensure proper grounding and avoid wet conditions"
-    ]
+    ],
+    energy: ["3 (Mechanical)", "4 (Electrical)", "6 (Sound)", "1 (Gravity)"]
   },
   workingAtHeights: {
     hazards: [
@@ -32,7 +34,8 @@ const taskData = {
       "Use fall protection equipment",
       "Secure tools to prevent dropping",
       "Inspect ladders and scaffolds before use"
-    ]
+    ],
+    energy: ["1 (Gravity)", "2 (Motion)"]
   },
   concretePouring: {
     hazards: [
@@ -44,7 +47,8 @@ const taskData = {
       "Wear long sleeves and gloves",
       "Clean spills promptly",
       "Use mechanical aids for heavy lifting"
-    ]
+    ],
+    energy: ["2 (Motion)", "1 (Gravity)", "9 (Chemical)", "10 (Temperature)"]
   },
   demolition: {
     hazards: [
@@ -56,18 +60,21 @@ const taskData = {
       "Wear respiratory protection",
       "Conduct structural assessments",
       "Identify and shut off utilities before work"
-    ]
+    ],
+    energy: ["1 (Gravity)", "2 (Motion)", "3 (Mechanical)", "9 (Chemical)", "10 (Temperature)"]
   }
 };
 
 const taskSelect = document.getElementById("task-select");
 const hazardsList = document.getElementById("hazards-list");
 const mitigationList = document.getElementById("mitigation-list");
+const energyList = document.getElementById("energy-list");
 
 taskSelect.addEventListener("change", () => {
   const selectedTask = taskSelect.value;
   hazardsList.innerHTML = "";
   mitigationList.innerHTML = "";
+  energyList.innerHTML = "";
 
   if (taskData[selectedTask]) {
     taskData[selectedTask].hazards.forEach(hazard => {
@@ -80,6 +87,12 @@ taskSelect.addEventListener("change", () => {
       const li = document.createElement("li");
       li.textContent = strategy;
       mitigationList.appendChild(li);
+    });
+
+    taskData[selectedTask].energy.forEach(source => {
+      const li = document.createElement("li");
+      li.textContent = source;
+      energyList.appendChild(li);
     });
   }
 });
