@@ -1,14 +1,14 @@
 const energyDescriptions = {
-  "Gravity": "Hazards caused by potential falling objects or people (e.g., working at heights).",
-  "Motion": "Hazards related to moving equipment or personnel.",
-  "Mechanical": "Hazards from rotating or powered tools and equipment.",
-  "Electrical": "Hazards from live wires, equipment, or improper grounding.",
-  "Pressure": "Hazards from pressurized systems or materials.",
-  "Sound": "Hazards due to high noise levels from machinery or tools.",
-  "Radiation": "Hazards from exposure to UV, lasers, or other radiation sources.",
-  "Biological": "Hazards from mold, bacteria, or other biohazards.",
-  "Chemical": "Hazards related to exposure to chemicals or concrete.",
-  "Temperature": "Hazards from extreme heat or cold (e.g., hot surfaces or freezing conditions)."
+  "Gravity": "Risks involving falls from heights or dropped objects.",
+  "Motion": "Hazards caused by moving tools, equipment, or materials.",
+  "Mechanical": "Contact with gears, belts, or rotating equipment.",
+  "Electrical": "Exposure to live wires, faulty cords, or electric shock.",
+  "Pressure": "Release of high-pressure gases, fluids, or systems.",
+  "Sound": "Hearing damage from loud machinery or ongoing noise.",
+  "Radiation": "Exposure to UV light, lasers, or other radiation sources.",
+  "Biological": "Contact with mold, bacteria, or unsanitary materials.",
+  "Chemical": "Interaction with harmful substances like solvents or cement.",
+  "Temperature": "Working in hot environments or near cold surfaces or tools."
 };
 
 const taskData = {
@@ -75,6 +75,129 @@ const taskData = {
       "Identify and shut off utilities before work"
     ],
     energy: ["Gravity", "Motion", "Mechanical", "Chemical", "Temperature"]
+  },
+  jackhammering: {
+    hazards: [
+      "Vibration injuries",
+      "Flying debris",
+      "High noise levels"
+    ],
+    mitigation: [
+      "Wear hearing protection, gloves, goggles",
+      "Keep others at safe distance"
+    ],
+    energy: ["Motion", "Mechanical", "Sound"]
+  },
+  wheelbarrowUse: {
+    hazards: [
+      "Back and shoulder strain",
+      "Tripping or tipping over",
+      "Uneven surfaces"
+    ],
+    mitigation: [
+      "Use proper posture",
+      "Balance the load",
+      "Watch terrain"
+    ],
+    energy: ["Motion", "Gravity"]
+  },
+  shovelingTrenching: {
+    hazards: [
+      "Strains and sprains",
+      "Contact with underground services"
+    ],
+    mitigation: [
+      "Use ergonomic shovels",
+      "Locate all utilities before digging"
+    ],
+    energy: ["Motion", "Gravity"]
+  },
+  loadingTrucks: {
+    hazards: [
+      "Falling from height",
+      "Crushing from shifting load"
+    ],
+    mitigation: [
+      "Use ramps",
+      "Have a spotter",
+      "Follow safe loading procedures"
+    ],
+    energy: ["Gravity", "Mechanical"]
+  },
+  mixingMortar: {
+    hazards: [
+      "Inhalation of dust",
+      "Skin irritation"
+    ],
+    mitigation: [
+      "Use masks and gloves",
+      "Mix slowly to control dust"
+    ],
+    energy: ["Chemical", "Motion"]
+  },
+  rebarHandling: {
+    hazards: [
+      "Cuts from sharp edges",
+      "Heavy lifting injuries",
+      "Tripping hazards"
+    ],
+    mitigation: [
+      "Wear gloves",
+      "Use team lifts",
+      "Keep workspace clear"
+    ],
+    energy: ["Mechanical", "Gravity"]
+  },
+  ladderWork: {
+    hazards: [
+      "Falls from ladder",
+      "Slips or missteps"
+    ],
+    mitigation: [
+      "Maintain 3-point contact",
+      "Secure ladder base",
+      "Inspect ladder before use"
+    ],
+    energy: ["Gravity"]
+  },
+  siteCleanup: {
+    hazards: [
+      "Sharp objects",
+      "Trip hazards",
+      "Biohazards in waste"
+    ],
+    mitigation: [
+      "Wear gloves",
+      "Use broom/dustpan",
+      "Dispose waste safely"
+    ],
+    energy: ["Motion", "Biological"]
+  },
+  generatorOperation: {
+    hazards: [
+      "Carbon monoxide poisoning",
+      "Electrical shock",
+      "Overheating"
+    ],
+    mitigation: [
+      "Run outdoors in ventilated areas",
+      "Inspect cables",
+      "Keep flammable materials away"
+    ],
+    energy: ["Electrical", "Temperature"]
+  },
+  compactingGravel: {
+    hazards: [
+      "Excessive vibration",
+      "Flying rocks",
+      "Noise exposure"
+    ],
+    mitigation: [
+      "Wear gloves and ear protection",
+      "Check machine condition",
+      "Keep bystanders clear"
+    ],
+    energy: ["Motion", "Mechanical", "Sound"]
   }
 };
 
