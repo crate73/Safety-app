@@ -15,9 +15,10 @@ body {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
-h1, h2 {
+h1 {
   text-align: center;
   color: #111827;
+  margin-bottom: 20px;
 }
 
 label {
@@ -63,6 +64,17 @@ button:hover {
 
 .info-section {
   margin-top: 30px;
+  background-color: #f3f4f6;
+  border-left: 5px solid #2563eb;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.info-section h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #1f2937;
+  font-size: 1.25em;
 }
 
 ul {
@@ -74,6 +86,25 @@ ul {
 ul li {
   margin-bottom: 8px;
   line-height: 1.5;
+}
+
+#energy-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#energy-list li {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.95em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 @media (max-width: 600px) {
