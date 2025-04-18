@@ -4,15 +4,15 @@
     "hazards": ["Slips", "Silica", "Sharp Objects"],
     "mitigation": ["Wear gloves", "Use N95 mask", "Tidy area"],
     "energy": ["Chemical", "Gravity", "Sharp Object"],
-    "fullHazards": "Slips and trips from uneven surfaces or debris. Exposure to airborne silica and dust. Contact with sharp materials.",
-    "fullMitigation": "Use A5 cut-resistant gloves. Use N95 masks or silica-rated respirators. Wet down dusty areas before sweeping."
+    "fullHazards": "Slips and trips from uneven surfaces or debris. Exposure to airborne silica and dust. Contact with sharp materials on site.",
+    "fullMitigation": "Wear A5-rated gloves, use N95 masks or respirators for silica. Wet down dusty areas before sweeping. Maintain a tidy, clear work zone."
   },
   {
     "name": "Ladder Use",
     "hazards": ["Falls", "Unstable Ladder"],
     "mitigation": ["Use podium ladder", "Secure base", "Wear harness"],
     "energy": ["Gravity"],
-    "fullHazards": "Risk of falls from height. Improper ladder use like standing on top rung.",
-    "fullMitigation": "Use podium or platform ladder. Fall protection over 6 ft on A-frame ladders."
+    "fullHazards": "Risk of falls from height and improper ladder setup. Overreaching or using damaged ladders may cause severe injury.",
+    "fullMitigation": "Use podium/platform ladder. If using A-frame above 6 ft, fall protection is required in BC. Inspect ladder before use."
   }
 ]
