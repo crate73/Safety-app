@@ -2,108 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TaskSafe</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    #glossary-toggle {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      user-select: none;
-    }
-
-    #glossary-toggle .icon {
-      transition: transform 0.3s ease;
-    }
-
-    #glossary-toggle.open .icon {
-      transform: rotate(90deg);
-    }
-
-    #energy-details {
-      transition: max-height 0.3s ease;
-      overflow: hidden;
-      max-height: 0;
-    }
-
-    #energy-details.open {
-      max-height: 1000px;
-    }
-  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>TaskSafe</h1>
-
-    <label for="task-select">Select a Task:</label>
-    <select id="task-select">
-      <option value="">--Choose a Task--</option>
-    </select>
-
-    <div id="hazards-section" class="info-section">
-      <h2>Associated Hazards</h2>
-      <ul id="hazards-list"></ul>
-    </div>
-
-    <div id="mitigation-section" class="info-section">
-      <h2>Mitigation Strategies</h2>
-      <ul id="mitigation-list"></ul>
-    </div>
-
-    <div id="energy-section" class="info-section">
-      <h2>Energy Sources</h2>
-      <ul id="energy-list"></ul>
-    </div>
-
-    <div id="all-energy-info" class="info-section">
-      <h2 id="glossary-toggle" onclick="toggleEnergyInfo()">
-        <span class="icon">▶</span> Glossary
-      </h2>
-      <ul id="energy-details">
-        <li><strong>Gravity:</strong> Risks involving falls from heights or dropped objects.</li>
-        <li><strong>Motion:</strong> Hazards caused by moving tools, equipment, or materials.</li>
-        <li><strong>Mechanical:</strong> Contact with gears, belts, or rotating equipment.</li>
-        <li><strong>Electrical:</strong> Exposure to live wires, faulty cords, or electric shock.</li>
-        <li><strong>Pressure:</strong> Release of high-pressure gases, fluids, or systems.</li>
-        <li><strong>Sound:</strong> Hearing damage from loud machinery or ongoing noise.</li>
-        <li><strong>Radiation:</strong> Exposure to UV light, lasers, or other radiation sources.</li>
-        <li><strong>Biological:</strong> Contact with mold, bacteria, or unsanitary materials.</li>
-        <li><strong>Chemical:</strong> Interaction with harmful substances like solvents or cement.</li>
-        <li><strong>Temperature:</strong> Working in hot environments or near cold surfaces or tools.</li>
-      </ul>
-    </div>
-  </div>
-
-  <script>
-    function toggleEnergyInfo() {
-      const toggle = document.getElementById("glossary-toggle");
-      const list = document.getElementById("energy-details");
-
-      toggle.classList.toggle("open");
-      list.classList.toggle("open");
-    }
-
-    // Populate dropdown dynamically
-    document.addEventListener("DOMContentLoaded", function () {
-      const taskSelect = document.getElementById("task-select");
-      if (typeof taskData !== "undefined") {
-        Object.keys(taskData).forEach(taskKey => {
-          const option = document.createElement("option");
-          option.value = taskKey;
-          option.textContent = formatTaskLabel(taskKey);
-          taskSelect.appendChild(option);
-        });
-      }
-    });
-
-    function formatTaskLabel(key) {
-      return key
-        .replace(/([A-Z])/g, " $1")
-        .replace(/^./, str => str.toUpperCase());
-    }
-  </script>
-  <script src="script.js"></script>
+  <div id="app"></div>
+  <script src="script.js" type="module"></script>
 </body>
 </html>
