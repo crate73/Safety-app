@@ -1,3 +1,16 @@
+const energyDescriptions = {
+  "Gravity": "Hazards caused by potential falling objects or people (e.g., working at heights).",
+  "Motion": "Hazards related to moving equipment or personnel.",
+  "Mechanical": "Hazards from rotating or powered tools and equipment.",
+  "Electrical": "Hazards from live wires, equipment, or improper grounding.",
+  "Pressure": "Hazards from pressurized systems or materials.",
+  "Sound": "Hazards due to high noise levels from machinery or tools.",
+  "Radiation": "Hazards from exposure to UV, lasers, or other radiation sources.",
+  "Biological": "Hazards from mold, bacteria, or other biohazards.",
+  "Chemical": "Hazards related to exposure to chemicals or concrete.",
+  "Temperature": "Hazards from extreme heat or cold (e.g., hot surfaces or freezing conditions)."
+};
+
 const taskData = {
   materialHandling: {
     hazards: [
@@ -92,6 +105,7 @@ taskSelect.addEventListener("change", () => {
     taskData[selectedTask].energy.forEach(source => {
       const li = document.createElement("li");
       li.textContent = source;
+      li.title = energyDescriptions[source] || "";
       energyList.appendChild(li);
     });
   }
