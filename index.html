@@ -5,6 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TaskSafe</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    #glossary-toggle {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      user-select: none;
+    }
+
+    #glossary-toggle .icon {
+      transition: transform 0.3s ease;
+    }
+
+    #glossary-toggle.open .icon {
+      transform: rotate(90deg);
+    }
+
+    #energy-details {
+      transition: max-height 0.3s ease;
+      overflow: hidden;
+      max-height: 0;
+    }
+
+    #energy-details.open {
+      max-height: 1000px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -31,8 +58,10 @@
     </div>
 
     <div id="all-energy-info" class="info-section">
-      <h2 style="cursor: pointer;" onclick="toggleEnergyInfo()">ℹ️ Energy Types Overview</h2>
-      <ul id="energy-details" style="display: none;">
+      <h2 id="glossary-toggle" onclick="toggleEnergyInfo()">
+        <span class="icon">▶</span> Glossary
+      </h2>
+      <ul id="energy-details">
         <li><strong>Gravity:</strong> Risks involving falls from heights or dropped objects.</li>
         <li><strong>Motion:</strong> Hazards caused by moving tools, equipment, or materials.</li>
         <li><strong>Mechanical:</strong> Contact with gears, belts, or rotating equipment.</li>
@@ -49,11 +78,14 @@
 
   <script>
     function toggleEnergyInfo() {
-      const details = document.getElementById("energy-details");
-      details.style.display = details.style.display === "none" ? "block" : "none";
+      const toggle = document.getElementById("glossary-toggle");
+      const list = document.getElementById("energy-details");
+
+      toggle.classList.toggle("open");
+      list.classList.toggle("open");
     }
 
-    // Populate dropdown dynamically from script.js
+    // Populate dropdown dynamically
     document.addEventListener("DOMContentLoaded", function () {
       const taskSelect = document.getElementById("task-select");
       if (typeof taskData !== "undefined") {
