@@ -162,16 +162,20 @@ const taskData = {
   },
   siteCleanup: {
     hazards: [
-      "Sharp objects",
-      "Trip hazards",
-      "Biohazards in waste"
+      "Sharp objects and debris on the ground",
+      "Trip hazards from scattered materials",
+      "Exposure to biological waste or unsanitary materials",
+      "Inhalation of silica dust during sweeping or movement",
+      "Contact with chemical compounds used for dust suppression"
     ],
     mitigation: [
-      "Wear gloves",
-      "Use broom/dustpan",
-      "Dispose waste safely"
+      "Wear A5-rated cut-resistant gloves and safety footwear",
+      "Keep walkways clear and organized",
+      "Use proper disposal methods for biological waste",
+      "Wear a respirator or N95 mask when dealing with dust",
+      "Handle dust suppression compounds with care and follow safety instructions"
     ],
-    energy: ["Motion", "Biological"]
+    energy: ["Motion", "Biological", "Chemical"]
   },
   generatorOperation: {
     hazards: [
