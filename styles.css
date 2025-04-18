@@ -1,67 +1,44 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f5;
+  background-color: #f3f4f6;
+  color: #1f2937;
   margin: 0;
   padding: 20px;
 }
 
-.container {
-  max-width: 700px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-}
-
 h1 {
-  color: #065f46;
   text-align: center;
+  color: #065f46;
 }
 
-select {
-  padding: 10px;
+.task-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
   margin-bottom: 20px;
-  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  margin-top: 20px;
-  color: #333;
-}
-
-ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-.energy-badge {
-  display: inline-block;
+.energy-tag {
   background-color: #fcd34d;
   color: #92400e;
   padding: 4px 8px;
-  margin: 4px 4px 0 0;
-  border-radius: 8px;
-  font-size: 0.85rem;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-right: 6px;
+  display: inline-block;
 }
 
 button {
-  background-color: #065f46;
+  margin-top: 10px;
+  background: #065f46;
   color: white;
   border: none;
   padding: 6px 12px;
-  margin-top: 10px;
+  border-radius: 6px;
   cursor: pointer;
-  border-radius: 5px;
 }
 
 button:hover {
-  background-color: #047857;
-}
-
-.glossary summary {
-  font-weight: bold;
-  margin-top: 30px;
-  cursor: pointer;
-  color: #065f46;
+  background: #047857;
 }
