@@ -151,12 +151,15 @@ const taskData = {
   ladderWork: {
     hazards: [
       "Falls from ladder",
-      "Slips or missteps"
+      "Slips or missteps",
+      "Incorrect ladder setup or use"
     ],
     mitigation: [
-      "Maintain 3-point contact",
-      "Secure ladder base",
-      "Inspect ladder before use"
+      "Use a podium (platform) ladder whenever possible",
+      "If using an A-frame ladder and going higher than 6 feet, fall protection is required",
+      "Ensure ladder is stable and secured before climbing",
+      "Maintain 3-point contact at all times",
+      "Inspect ladder before each use"
     ],
     energy: ["Gravity"]
   },
