@@ -13,11 +13,6 @@
     <label for="task-select">Select a Task:</label>
     <select id="task-select">
       <option value="">--Choose a Task--</option>
-      <option value="materialHandling">Material Handling</option>
-      <option value="powerTools">Operating Power Tools</option>
-      <option value="workingAtHeights">Working at Heights</option>
-      <option value="concretePouring">Concrete Pouring</option>
-      <option value="demolition">Demolition Work</option>
     </select>
 
     <div id="hazards-section" class="info-section">
@@ -56,6 +51,25 @@
     function toggleEnergyInfo() {
       const details = document.getElementById("energy-details");
       details.style.display = details.style.display === "none" ? "block" : "none";
+    }
+
+    // Populate dropdown dynamically from script.js
+    document.addEventListener("DOMContentLoaded", function () {
+      const taskSelect = document.getElementById("task-select");
+      if (typeof taskData !== "undefined") {
+        Object.keys(taskData).forEach(taskKey => {
+          const option = document.createElement("option");
+          option.value = taskKey;
+          option.textContent = formatTaskLabel(taskKey);
+          taskSelect.appendChild(option);
+        });
+      }
+    });
+
+    function formatTaskLabel(key) {
+      return key
+        .replace(/([A-Z])/g, " $1")
+        .replace(/^./, str => str.toUpperCase());
     }
   </script>
   <script src="script.js"></script>
