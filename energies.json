@@ -1,5 +1,5 @@
 {
-  "Chemical": "Hazards caused by substances like solvents, dust suppressants, or cleaning agents.",
-  "Gravity": "Hazards related to falling objects or people, including slips, trips, and falls from height.",
-  "Sharp Object": "Hazards caused by contact with sharp materials like broken glass, nails, or metal shards."
+  "Chemical": "Hazards from substances like solvents, dust suppressants.",
+  "Gravity": "Hazards from falling objects or people.",
+  "Sharp Object": "Hazards from nails, broken glass, or metal."
 }

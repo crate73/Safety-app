@@ -1,39 +1,18 @@
 [
   {
     "name": "Site Cleanup",
-    "shortHazards": [
-      "Slips",
-      "Silica",
-      "Sharp Objects"
-    ],
-    "shortMitigation": [
-      "Wear gloves",
-      "Use N95 mask",
-      "Tidy area"
-    ],
-    "fullHazards": "Slips and trips from uneven surfaces or debris. Exposure to airborne silica and dust from sweeping or demolition. Contact with sharp objects such as nails, wires, and broken glass. Potential exposure to chemical compounds used to suppress dust.",
-    "fullMitigation": "Wear A5 cut-resistant gloves. Use a silica-rated respirator or N95 mask. Wet down dusty areas before sweeping. Use compounds to suppress dust. Handle chemicals with care following WHMIS guidelines.",
-    "energy": [
-      "Chemical",
-      "Gravity",
-      "Sharp Object"
-    ]
+    "hazards": ["Slips", "Silica", "Sharp Objects"],
+    "mitigation": ["Wear gloves", "Use N95 mask", "Tidy area"],
+    "energy": ["Chemical", "Gravity", "Sharp Object"],
+    "fullHazards": "Slips and trips from uneven surfaces or debris. Exposure to airborne silica and dust. Contact with sharp materials.",
+    "fullMitigation": "Use A5 cut-resistant gloves. Use N95 masks or silica-rated respirators. Wet down dusty areas before sweeping."
   },
   {
     "name": "Ladder Use",
-    "shortHazards": [
-      "Falls",
-      "Unstable Ladder"
-    ],
-    "shortMitigation": [
-      "Use podium ladder",
-      "Secure base",
-      "Wear harness"
-    ],
-    "fullHazards": "Risk of falls from height. Improper use of ladders such as standing on the top rung. Using an A-frame ladder without fall protection above 6 feet.",
-    "fullMitigation": "Use a podium or platform ladder whenever possible. If using an A-frame ladder and climbing above 6 feet, use fall protection. Ensure ladder is on stable ground and properly secured. Inspect ladder condition before use.",
-    "energy": [
-      "Gravity"
-    ]
+    "hazards": ["Falls", "Unstable Ladder"],
+    "mitigation": ["Use podium ladder", "Secure base", "Wear harness"],
+    "energy": ["Gravity"],
+    "fullHazards": "Risk of falls from height. Improper ladder use like standing on top rung.",
+    "fullMitigation": "Use podium or platform ladder. Fall protection over 6 ft on A-frame ladders."
   }
 ]
