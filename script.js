@@ -10,7 +10,7 @@ const taskData = {
       "Wear appropriate PPE (gloves, steel-toe boots)",
       "Keep walkways clear and organized"
     ],
-    energy: ["2 (Motion)", "1 (Gravity)"]
+    energy: ["Motion", "Gravity"]
   },
   powerTools: {
     hazards: [
@@ -23,7 +23,7 @@ const taskData = {
       "Use safety guards and PPE (goggles, gloves)",
       "Ensure proper grounding and avoid wet conditions"
     ],
-    energy: ["3 (Mechanical)", "4 (Electrical)", "6 (Sound)", "1 (Gravity)"]
+    energy: ["Mechanical", "Electrical", "Sound", "Gravity"]
   },
   workingAtHeights: {
     hazards: [
@@ -35,7 +35,7 @@ const taskData = {
       "Secure tools to prevent dropping",
       "Inspect ladders and scaffolds before use"
     ],
-    energy: ["1 (Gravity)", "2 (Motion)"]
+    energy: ["Gravity", "Motion"]
   },
   concretePouring: {
     hazards: [
@@ -48,7 +48,7 @@ const taskData = {
       "Clean spills promptly",
       "Use mechanical aids for heavy lifting"
     ],
-    energy: ["2 (Motion)", "1 (Gravity)", "9 (Chemical)", "10 (Temperature)"]
+    energy: ["Motion", "Gravity", "Chemical", "Temperature"]
   },
   demolition: {
     hazards: [
@@ -61,7 +61,7 @@ const taskData = {
       "Conduct structural assessments",
       "Identify and shut off utilities before work"
     ],
-    energy: ["1 (Gravity)", "2 (Motion)", "3 (Mechanical)", "9 (Chemical)", "10 (Temperature)"]
+    energy: ["Gravity", "Motion", "Mechanical", "Chemical", "Temperature"]
   }
 };
 
